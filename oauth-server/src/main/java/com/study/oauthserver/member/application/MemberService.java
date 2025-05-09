@@ -26,6 +26,7 @@ public class MemberService {
 		}
 
 		Member member = memberRepository.save(Member.builder()
+			.name(memberSaveReqDto.name())
 			.email(memberSaveReqDto.email())
 			.password(passwordEncoder.encode(memberSaveReqDto.password()))
 			.role(Role.USER)

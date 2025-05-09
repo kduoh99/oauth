@@ -13,7 +13,7 @@
     },
     methods: {
       async sendCode(code) {
-        const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}/api/member/callback/kakao?code=${code}`);
+        const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}/api/auth/callback/kakao?code=${code}`);
         const accessToken = response.data.accessToken;
         localStorage.setItem('accessToken', accessToken);
         window.location.href = '/';

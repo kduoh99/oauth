@@ -57,7 +57,7 @@
           email: this.email,
           password: this.password,
         };
-        const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}/api/member/login`, data);
+        const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}/api/auth/login`, data);
         const accessToken = response.data.accessToken;
         localStorage.setItem('accessToken', accessToken);
         window.location.href = '/';

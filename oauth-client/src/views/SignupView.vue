@@ -6,6 +6,7 @@
           <v-card-title class="text-h5 text-center">회원가입</v-card-title>
           <v-card-text>
             <v-form @submit.prevent="signup">
+              <v-text-field label="이름" v-model="name" required></v-text-field>
               <v-text-field label="이메일" v-model="email" type="email" required></v-text-field>
               <v-text-field label="비밀번호" v-model="password" type="password" required></v-text-field>
               <v-btn type="submit" color="primary" block>회원가입</v-btn>
@@ -23,6 +24,7 @@
   export default {
     data() {
       return {
+        name: '',
         email: '',
         password: '',
       };
@@ -30,6 +32,7 @@
     methods: {
       async signup() {
         const data = {
+          name: this.name,
           email: this.email,
           password: this.password,
         };
