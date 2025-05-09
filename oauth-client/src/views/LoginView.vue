@@ -42,6 +42,13 @@
       return {
         email: '',
         password: '',
+        googleUrl: 'https://accounts.google.com/o/oauth2/auth',
+        googleClientId: '878485436151-nn09c786oamimij7vsrej2fah5fbj48u.apps.googleusercontent.com',
+        googleRedirectUrl: 'http://localhost:3000/oauth/callback/google',
+        googleScope: 'openid email profile',
+        kakaoUrl: 'https://kauth.kakao.com/oauth/authorize',
+        kakaoClientId: 'e9debb27dcb7bad1e5c415d7df38702b',
+        kakaoRedirectUrl: 'http://localhost:3000/oauth/callback/kakao',
       };
     },
     methods: {
@@ -55,8 +62,14 @@
         localStorage.setItem('accessToken', accessToken);
         window.location.href = '/';
       },
-      googleLogin() {},
-      kakaoLogin() {},
+      googleLogin() {
+        const auth_uri = `${this.googleUrl}?client_id=${this.googleClientId}&redirect_uri=${this.googleRedirectUrl}&response_type=code&scope=${this.googleScope}`;
+        window.location.href = auth_uri;
+      },
+      kakaoLogin() {
+        const auth_uri = `${this.kakaoUrl}?client_id=${this.kakaoClientId}&redirect_uri=${this.kakaoRedirectUrl}&response_type=code`;
+        window.location.href = auth_uri;
+      },
     },
   };
 </script>
