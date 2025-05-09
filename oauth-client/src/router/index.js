@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import SignupView from '@/views/SignupView.vue';
 import LoginView from '@/views/LoginView.vue';
-import GoogleCallbackView from '@/views/GoogleCallbackView.vue';
-import KakaoCallbackView from '@/views/KakaoCallbackView.vue';
+import SocialCallbackView from '@/views/SocialCallbackView.vue';
 
 const routes = [
   {
@@ -16,12 +15,9 @@ const routes = [
     component: LoginView,
   },
   {
-    path: '/oauth/callback/google',
-    component: GoogleCallbackView,
-  },
-  {
-    path: '/oauth/callback/kakao',
-    component: KakaoCallbackView,
+    path: '/oauth/callback/:provider',
+    name: 'SocialCallback',
+    component: SocialCallbackView,
   },
 ];
 

@@ -43,12 +43,12 @@
         email: '',
         password: '',
         googleUrl: 'https://accounts.google.com/o/oauth2/auth',
-        googleClientId: '878485436151-nn09c786oamimij7vsrej2fah5fbj48u.apps.googleusercontent.com',
-        googleRedirectUrl: 'http://localhost:3000/oauth/callback/google',
+        googleClientId: process.env.VUE_APP_GOOGLE_CLIENT_ID,
+        googleRedirectUrl: process.env.VUE_APP_GOOGLE_REDIRECT_URL,
         googleScope: 'openid email profile',
         kakaoUrl: 'https://kauth.kakao.com/oauth/authorize',
-        kakaoClientId: 'e9debb27dcb7bad1e5c415d7df38702b',
-        kakaoRedirectUrl: 'http://localhost:3000/oauth/callback/kakao',
+        kakaoClientId: process.env.VUE_APP_KAKAO_CLIENT_ID,
+        kakaoRedirectUrl: process.env.VUE_APP_KAKAO_REDIRECT_URL,
       };
     },
     methods: {
