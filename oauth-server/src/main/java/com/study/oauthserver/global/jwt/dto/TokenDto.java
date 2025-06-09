@@ -1,4 +1,4 @@
-package com.study.oauthserver.global.auth.dto;
+package com.study.oauthserver.global.jwt.dto;
 
 import lombok.Builder;
 

@@ -1,4 +1,4 @@
-package com.study.oauthserver.global.auth;
+package com.study.oauthserver.global.jwt;
 
 import java.io.IOException;
 

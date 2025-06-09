@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.study.oauthserver.auth.application.AuthService;
-import com.study.oauthserver.global.auth.dto.TokenDto;
+import com.study.oauthserver.global.jwt.dto.TokenDto;
 import com.study.oauthserver.auth.api.dto.request.LoginReqDto;
 import com.study.oauthserver.auth.api.dto.response.LoginResDto;
 import com.study.oauthserver.member.domain.SocialType;

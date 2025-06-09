@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.study.oauthserver.auth.application.oauth.OAuthService;
-import com.study.oauthserver.global.auth.TokenProvider;
-import com.study.oauthserver.global.auth.dto.TokenDto;
+import com.study.oauthserver.global.jwt.TokenProvider;
+import com.study.oauthserver.global.jwt.dto.TokenDto;
 import com.study.oauthserver.auth.api.dto.request.LoginReqDto;
 import com.study.oauthserver.auth.api.dto.response.LoginResDto;
 import com.study.oauthserver.member.domain.Member;
